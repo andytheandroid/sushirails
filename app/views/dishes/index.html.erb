@@ -1,0 +1,40 @@
+
+<h1>Dishes</h1>
+
+
+<div class="instrument-index-grid pt4">
+  <% @dishes.each do |dish| %>
+
+    <div class="instrument border-light">
+      <div class="instrument-thumb">
+
+      <% if dish.category? %>
+        <div class="condition">
+          <span class="tag is-dark"><%= dish.category %></span>
+        </div>
+      <% end %>
+      </div>
+
+
+      <div class="instrument border-light">
+      <div class="instrument-thumb">
+      <%= link_to image_tag("naritaroll.jpg")  %>
+     </div>
+</div>
+ 
+    <div class="pa3">
+
+      <h3 class="fw7 f4 title"><%= link_to dish.name, dish %></h3>
+
+      <p class="has-text-gray fg pt1">Sold by Narita sushi</p>
+
+      <p class="f3 fw6 has-text-right pt2 price"><%= number_to_currency(dish.price) %></p>
+
+         <%= link_to 'Edit', edit_dish_path(dish), class: "button is-small" %>
+         <%= button_to 'Destroy', dish, method: :delete, data: { confirm: "Are you sure ?" }, class: "button is-small" %>
+
+    </div>
+  </div>
+  <% end %>
+</div>
+<%= link_to 'New Dish', new_dish_path %>
