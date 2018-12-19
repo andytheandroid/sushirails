@@ -1,7 +1,5 @@
 
-<h1>Dishes</h1>
 
-<%= link_to 'New Dish', new_dish_path %>
 
 <!--
 <div class="instrument-index-grid pt4">
@@ -40,6 +38,7 @@
 
 -->
 <div class="instrument-index-grid pt4">
+
   <% @dishes.each do |dish| %>
 
 <div class="card">
@@ -75,5 +74,6 @@
 </div>
 
 <% end %>
+
 </div>
 
