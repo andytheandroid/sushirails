@@ -50,7 +50,7 @@
             <% end %>
 
             <% if user_signed_in? %>
-              <%= link_to 'Add new Dish', new_dish_path, class: "navbar-item button is-dark" %>
+              <%= link_to 'New Dish', new_dish_path,  class:"button is-success"%>
 
               <div class="navbar-item has-dropdown is-hoverable">
                 <%= link_to 'Account', edit_user_registration_path, class: "navbar-link" %>
@@ -63,7 +63,6 @@
 
             <%= link_to "Sign In", new_user_session_path, class:"navbar-item button is-danger" %>
             <%= link_to "Sign up", new_user_registration_path, class:"navbar-item button is-danger"%>
-            <%= link_to 'New Dish', new_dish_path,  class:"button is-success is-medium"%>
 
             <% end %>
 
